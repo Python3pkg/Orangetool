@@ -12,7 +12,7 @@ def hdmi_on(DEBUG=False):
         return True
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 def hdmi_off(DEBUG=False):
@@ -29,7 +29,7 @@ def hdmi_off(DEBUG=False):
         return True
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 def hdmi_size(v=None,h=None,DEBUG=False):
     '''
@@ -54,5 +54,5 @@ def hdmi_size(v=None,h=None,DEBUG=False):
         return True
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"

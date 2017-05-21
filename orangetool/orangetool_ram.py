@@ -81,7 +81,7 @@ def freeup(DEBUG=False):
             return convert_bytes(0)
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 

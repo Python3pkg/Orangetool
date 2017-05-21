@@ -25,7 +25,7 @@ def internet(host="8.8.8.8", port=53, timeout=3):
         socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
         return True
     except Exception as ex:
-        print(str(ex))
+        print((str(ex)))
         return False
 
 def local_ip(DEBUG=False):
@@ -51,7 +51,7 @@ def local_ip(DEBUG=False):
 
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 def global_ip(DEBUG=False):
@@ -69,7 +69,7 @@ def global_ip(DEBUG=False):
         return ip_list[0]
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 def set_ip(ip,DEVICE="eth0",DEBUG=False):
@@ -93,7 +93,7 @@ iface device inet static
         dns-nameservers 8.8.8.8 8.8.4.4
     '''
     try:
-        if bool(re.match(ip_pattern,ip))==False or ip.find("192.168.")==-1 or DEVICE not in mac().keys():
+        if bool(re.match(ip_pattern,ip))==False or ip.find("192.168.")==-1 or DEVICE not in list(mac().keys()):
             raise Exception("IP Formation Error")
         static_string=static_string.replace("ip",ip)
         static_string=static_string.replace("device",DEVICE)
@@ -104,7 +104,7 @@ iface device inet static
         return True
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 
@@ -130,7 +130,7 @@ def ping(ip,packet_number=3,DEBUG=False):
             return False
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 def mac(DEBUG=False):
@@ -148,10 +148,10 @@ def mac(DEBUG=False):
             mac_addr=open(net_dir+"/"+item+"/address","r")
             mac_list.append(mac_addr.read()[:-1])
             mac_addr.close()
-        return dict(zip(dir_list,mac_list))
+        return dict(list(zip(dir_list,mac_list)))
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 

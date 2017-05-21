@@ -34,7 +34,7 @@ def get_temp(Zone=0,DEBUG=False):
             #return "Error"
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 def zero_insert(input_string):
@@ -77,7 +77,7 @@ def uptime(DEBUG=False):
         return time_convert(response[:-1].split(" ")[0])
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 def idletime(DEBUG=False):
     '''
@@ -92,7 +92,7 @@ def idletime(DEBUG=False):
         return time_convert(response[:-1].split(" ")[1])
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 def version():
@@ -129,7 +129,7 @@ def wakeup(day=0,hour=0,minute=0,DEBUG=False):
         return True
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 def sleep(DEBUG=False):
     '''
@@ -145,7 +145,7 @@ def sleep(DEBUG=False):
             raise Exception('Root Error')
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 def halt(DEBUG=False):
@@ -162,7 +162,7 @@ def halt(DEBUG=False):
             raise Exception('Root Error')
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 def restart(DEBUG=False):
@@ -179,7 +179,7 @@ def restart(DEBUG=False):
             raise Exception('Root Error')
     except Exception as e:
         if DEBUG == True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 

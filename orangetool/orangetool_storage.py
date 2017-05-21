@@ -24,7 +24,7 @@ def mount_status(device_name,DEBUG=False):
             return memory_list
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 def storage_status(DEBUG=False):
@@ -43,10 +43,10 @@ def storage_status(DEBUG=False):
                 memory_items.append("sd"+i+"1")
         for item in memory_items:
             memory_status.append(mount_status(item))
-        return dict(zip(memory_items,memory_status))
+        return dict(list(zip(memory_items,memory_status)))
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 def unmount(ADDRESS,DEBUG=False):
@@ -67,7 +67,7 @@ def unmount(ADDRESS,DEBUG=False):
             return False
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 def unmount_all(DEBUG=False):
@@ -89,7 +89,7 @@ def unmount_all(DEBUG=False):
         return True
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 def random_generator(number):
     response=""
@@ -122,7 +122,7 @@ def mount(device_name,mount_address=None,DEBUG=False):
             return False
     except Exception as e:
         if DEBUG==True:
-            print(str(e))
+            print((str(e)))
         return "Error"
 
 
